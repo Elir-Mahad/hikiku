@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- this makes sure that the media queries work; without it the queries will not function -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title> ひきく - HiKiKu</title>
+
+	<!-- link to google fonts -->    
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
+
+	<!-- load in fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <style>
+    
+        html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+        .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+        html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+        *, *:before, *:after {box-sizing: inherit}
+
+        .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+        html {
+            font-size: 62.5%;
+        }
+
+        /* Below are the general styles - linking different fonts to their elements. */
+
+        body,
+        ul,
+        h1,
+        h2,
+        h3
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2rem;
+            background-color:black;
+        }
+
+
+        .wrapper {
+            max-width: 1100px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Below are the Styles for the nav (jp terms)*/
+
+        .firstbox {
+            display: flex;
+        }
+
+        .topnavone { 
+            background-color:#eef9bf;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .terms h3{
+            font-size:2rem;
+            font-weight: 100;
+        }
+
+        .terms p{
+            font-size:1.7rem;
+            border-bottom:1px solid black;
+            margin-bottom:2.9rem;
+        }
+
+        .terms span{
+            display: none;
+            color:darkgreen;  
+        }
+
+        /* Below are the styles for the pop up */
+
+        .popup {
+            text-align:center;
+            background-color:aliceblue;
+            border: 5px solid green;
+            font-size:2rem;
+            padding: 5rem;
+            width: 90%;
+            position: absolute;
+            top:0rem;
+        }
+
+        .popup .exit {
+            text-align: center;
+            font-size:5rem;
+            border:2px solid green;
+            width: 8rem;
+            height: 6.9rem;
+            display: block;
+            margin:auto;
+        }
+
+        .popup .exit:hover{
+            color:lightgreen;
+            background-color:black;
+        }
+
+        /* below are the styles for the header */
+
+        header {
+            min-width: 90%;
+            background-image: url(./Assets/header.jpg);
+            background-size: cover;
+        }
+
+        .headertext {
+            color:black;
+            width:100%;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        header h1 {
+            font-size: 6.5rem;
+            font-weight: 400;
+            width: 7%;
+            background-color: #a8d0e6;
+            border-bottom:2px solid black;
+            border-right:2px solid black;
+            border-left:2px solid black;
+        }
+
+        .headertext h3{
+            font-size:1.8rem;
+            font-weight: 400;
+            background-color: #a8d0e6;
+            border-bottom:2px solid black;
+            border-right:2px solid black;
+            padding: 1rem;
+            width: 70%;
+            position: relative;
+            bottom:24.6rem;
+            left:8.6rem;
+        }
+
+
+        /* Below general styles for the 'anime gallery'  */
+
+        .animegallery {
+            background-color:#eef9bf;
+            padding-top: 3rem;
+        }
+
+        .instructions{
+            display:flex;
+            justify-content:center;
+            margin-top: -2.5rem;
+            margin-bottom: -1rem;
+        }
+
+        .instructions p {
+            border:1px solid black;
+            padding: 1rem;
+        }
+
+        .instructions select {
+            margin:2rem;
+            padding: 1rem;
+            color: black;
+            font-size:2rem;
+            font-weight: 500;
+            width: 250px;
+            box-sizing: border-box;
+            border: 2px solid green;
+            border-radius: 0.5em;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background: url("/Assets/down-arrow.svg");
+            background-repeat: no-repeat, repeat;
+            background-position: right 0.7em top 60%, 0 0;
+            background-size: 1.8rem;
+            background-color:aliceblue;
+        }
+
+        .animegallery h2 {
+            font-size:2.5rem;
+            padding: 1rem;
+            border:1px solid black;
+            background-color: #a8d0e6;
+        }
+
+        .animegallery h3{
+            font-size:2rem;
+            font-weight: 100;
+            margin-top:-1rem;
+            text-align: center;
+        }
+
+        .animegallery p {
+            font-size:1.9rem;
+        }
+
+        .animegallery .rate span { 
+            color:red;
+            font-weight: bold;
+        }
+
+        .animegallery img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            background-color: #a8d0e6;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        .overlay p {
+            color: black; 
+            font-weight: 700;
+            font-size:1.35rem;
+            padding: 1rem;
+        }   
+
+        .container:hover .overlay { 
+            opacity:1;
+        } 
+
+        /* Below are the specific styles for content within the containers */
+
+        .animegallery .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .animegallery .container {
+            display: flex;
+            box-shadow: 0px 0px 5px black; /* the 5px creates the shadow effect for all sides */
+            position: relative;
+            width: calc((135%/3) - 0%);   
+            margin: 2%;
+        }
+
+        .animegallery .container .words {
+            color:black;
+            padding: 2rem;
+            width: 100%;
+            height: 100%;
+            background-color:#f5f8f9; 
+            color:black;    
+        }
+
+        /* Footer */
+
+        footer {
+            background-color:black;
+            color:white;
+            font-size:1.9rem;
+            text-align: center;
+            padding: 0rem;
+        }
+
+
+        /* media queries */
+
+        @media (max-width: 1024px) {
+            
+            header {
+                min-width: 100%;
+                height: 65rem;    
+            }
+
+            .headertext h1 {
+                font-size:10rem;
+                width:10%;
+                
+            }
+            
+            .headertext h3{
+                display: none;
+            }
+            
+            .topnavone { 
+                display:none;
+            }
+            
+            .popup {
+                display: none;
+            }
+            
+
+            .animegallery .container {
+                width: calc((150%/2) - 2%);   
+                margin: 2%;
+            }
+            
+            .animegallery .container h2{
+                font-size:2.3rem;
+            }
+            
+            .animegallery .words p{
+                font-size:1.8rem;
+            }
+            
+        }
+
+        @media (max-width:834px) {
+            
+            header{
+                height: 55rem;
+            }
+            
+            .headertext h1 {
+                width:13%;
+                font-size:9rem;   
+            }
+            
+        }
+
+        @media (max-width:800px) {
+            
+            .animegallery .container {
+                width: calc((190%/2) - 2%);
+            }     
+            
+        }
+
+
+        @media (max-width:600px) {
+            
+            header {
+                height: 40rem;
+            }
+            
+            .headertext h1 {
+                width:14%;
+                font-size:6rem;
+                
+            }
+            
+            .animegallery .container {
+                width: calc((200%/2) - 2%);
+            } 
+            
+        }
+
+        @media (max-width:414px) {
+            
+            header{
+                height: 28rem;
+            }
+            
+            .headertext h1 {
+                width:14%;
+                font-size:5rem;   
+            }    
+            
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .container .image{
+                background-color:#f5f8f9;
+                margin-top:-2rem;
+                
+            }
+            
+            .container img{
+                height: 25rem;
+                width: 20rem;
+                display: block;
+                margin:auto;
+                margin-bottom:2rem;
+            }
+            
+            .animegallery .words p{
+                font-size:1.9rem;
+            }
+
+            .overlay p {
+            font-size:1.25rem;
+            }   
+            
+        }
+
+        @media (max-width:384px) {
+            
+            header{
+                height: 24rem;
+            }
+            
+            .headertext h1{
+                font-size:5rem;
+                width: 18%;
+            }
+            
+            .describesite {
+                padding: 1rem;
+            }
+            
+            .container .words h2{
+                font-size:2.5rem;
+            }
+            
+            .container .words p{
+                font-size:2rem;
+            }
+            
+            .container img{
+                height: 20rem;
+                width: 15rem;
+            }
+            
+        }
+    
+    </style>
+	
+</head>
+
+<body>
+
+		<section class="firstbox"> <!-- This is the first box which contains the header and the top menu -->
+
+                <div class="topnavone">
+
+                    <div class="terms">
+						<h3> Anime character types ▼</h3>
+						<p class="tsu">ツンデレ <span class="ts">Tsundere: character who treats the one they love poorly</span> </p>
+						<p class="kuu">クーデレ <span class="ku">kuudere: character who is cold, emotionless and cynical</span></p>
+						<p class="dan">だんデレ <span class="da">Dandere: character who is silent and keeps to themselves</span></p>
+						<p class="yan">ヤンデレ <span class="ya">Yandere: character who uses violence to control their love interest</span></p>
+						<p class="uts">うつデレ <span class="ut">Utsudere: character who is sad and depressed</span></p>
+						<p class="und">ウンデレ <span class="un">Undere: character who says yes to everything their crush says</span></p>
+						<p class="sado">さどデレ <span class="sa">Sadodere: character who enjoys manipulating people’s feelings</span></p>
+						<p class="maya">まやデレ <span class="ma">Mayadere: character who switches sides after falling in love</span></p>
+						<p class="kane">かねデレ <span class="kan">Kanedere: character who is attracted to others with money or status</span></p>
+						<p class="kami">かみデレ <span class="kam">Kamidere: character with a god complex - proud and arrogant</span></p>
+						<p class="bode">ボデレ <span class="bod">Bodere: character who fights because they can't articulate their desires</span></p>
+						<p class="baka">ばかデレ <span class="bak">Bakadere: character who is very clumsy and stupid</span></p>										
+					</div>
+
+                </div>
+
+				<header> <!-- header -->
+
+                    <div class=" headertext">
+
+						<h1 class="headingjpword"> ひきく </h1>
+						
+						<h3 class="translationheading">The english translation of ひきく is Hikiku.
+						Hikiku is a combination of the two words ひきこもり [hikikomori] and オタク [Otaku]. 
+						Hikikomori refers to reclusive adolescents or adults who withdraw from society.
+						Otaku refers to a person who is obsessed with anime or manga.</h3>
+                
+					</div>
+
+
+					<div class="popup">
+
+						<p> Hover over the japanese words to see their english counterparts and their definitions. </p>
+
+						<p class="exit"> x </p>
+
+					</div>
+
+				</header><!-- end of header -->
+
+		</section>
+	
+	<main>
+		
+		<section class="animegallery">
+
+			<h3 class="describesite">In this site, you will find the most popular animes based on the genre that you choose.</h3>
+
+					<div class="instructions">
+
+						<!-- <p>Choose a genre</p> -->
+
+						<select name="" id="">
+
+							<option value="thriller">Thriller</option>
+							<option value="violence">Violence</option>
+							<option value="psychological">Psychological</option>
+							<option value="mystery">Mystery</option>
+							<option value="fantasy world">Fantasy</option>
+			
+							<option value="romance"> Romance</option>
+							<option value="shounen">For boys</option>
+							<option value="shoujo">For girls</option>
+							<option value="sports"> Sports</option>
+							<option value="military">Military</option>
+			
+							<option value="alien">Alien</option>
+							<option value="detective">Detective</option>
+							<option value="virtual reality">Virtual Reality</option>
+							<option value="mecha">Robots</option>
+
+						</select>
+						
+                        <!-- <p> See the highest rated animations</p> -->
+
+					</div>
+
+			<div class="wrapper">
+
+					<section class="flex-container">
+
+					</section> 
+
+			</div>
+
+		</section>
+
+	</main>
+
+		<footer>
+
+			<div class="wrapper">
+
+				<p> Mahad, 2020 <span>&#183;</span> Data courtesy of kitsu.io </p>
+
+			</div>
+
+		</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+		<script>
+
+		$(function() {
+
+			var _0x2a8b=["\x69\x6E\x69\x74","\x74\x68\x72\x69\x6C\x6C\x65\x72","\x67\x65\x74\x61\x70\x70","\x67\x65\x74\x53\x65\x6C\x65\x63\x74\x56\x61\x6C\x75\x65","\x76\x61\x6C","\x6F\x70\x74\x69\x6F\x6E\x3A\x73\x65\x6C\x65\x63\x74\x65\x64","\x65\x6D\x70\x74\x79","\x2E\x66\x6C\x65\x78\x2D\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x63\x68\x61\x6E\x67\x65","\x73\x65\x6C\x65\x63\x74","\x64\x61\x74\x61","\x64\x69\x73\x70\x6C\x61\x79\x61\x70\x70","\x61\x76\x65\x72\x61\x67\x65\x52\x61\x74\x69\x6E\x67","\x61\x74\x74\x72\x69\x62\x75\x74\x65\x73","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72\x22\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x20\x3D\x22\x77\x6F\x72\x64\x73\x22\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x68\x32\x20\x63\x6C\x61\x73\x73\x3D\x22\x6E\x61\x6D\x65\x22\x3E\x20","\x65\x6E\x5F\x6A\x70","\x74\x69\x74\x6C\x65\x73","\x3C\x2F\x68\x32\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x70\x3E\x20\x54\x68\x69\x73\x20\x69\x73\x20\x61\x20","\x73\x68\x6F\x77\x54\x79\x70\x65","\x20\x66\x65\x61\x74\x75\x72\x65\x20\x3C\x70\x3E\x0D\x0A\x0D\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x3C\x70\x20\x63\x6C\x61\x73\x73\x20\x3D\x22\x72\x61\x74\x65\x22\x3E\x20\x49\x74\x27\x73\x20\x61\x76\x65\x72\x61\x67\x65\x20\x72\x61\x74\x69\x6E\x67\x20\x69\x73\x20\x3C\x73\x70\x61\x6E\x3E\x20","\x20\x3C\x2F\x73\x70\x61\x6E\x3E\x20\x3C\x70\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x70\x3E\x20\x4E\x75\x6D\x62\x65\x72\x20\x6F\x66\x20\x65\x70\x69\x73\x6F\x64\x65\x73\x3A\x20","\x65\x70\x69\x73\x6F\x64\x65\x43\x6F\x75\x6E\x74","\x3C\x70\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x72\x61\x74\x69\x6E\x67\x22\x3E\x20\x43\x6F\x6E\x74\x65\x6E\x74\x20\x72\x61\x74\x69\x6E\x67\x3A\x20","\x61\x67\x65\x52\x61\x74\x69\x6E\x67\x47\x75\x69\x64\x65","\x3C\x70\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x20\x22\x69\x6D\x61\x67\x65\x22\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x69\x6D\x67\x20\x63\x6C\x61\x73\x73\x3D\x22\x70\x6F\x73\x74\x65\x72\x22\x20\x73\x72\x63\x3D\x27","\x6C\x61\x72\x67\x65","\x70\x6F\x73\x74\x65\x72\x49\x6D\x61\x67\x65","\x27\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x6F\x76\x65\x72\x6C\x61\x79\x22\x3E\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x70\x20\x63\x6C\x61\x73\x73\x3D\x22\x73\x75\x6D\x6D\x61\x72\x79\x22\x3E","\x73\x79\x6E\x6F\x70\x73\x69\x73","\x3C\x70\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x2F\x64\x69\x76\x3E\x0D\x0A\x0D\x0A\x09\x09\x09\x09\x09\x09\x09\x09\x3C\x2F\x64\x69\x76\x3E","\x61\x70\x70\x65\x6E\x64","\x66\x6F\x72\x45\x61\x63\x68","\x74\x68\x65\x6E","\x68\x74\x74\x70\x3A\x2F\x2F\x70\x72\x6F\x78\x79\x2E\x68\x61\x63\x6B\x65\x72\x79\x6F\x75\x2E\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x6B\x69\x74\x73\x75\x2E\x69\x6F\x2F\x61\x70\x69\x2F\x65\x64\x67\x65\x2F\x61\x6E\x69\x6D\x65\x3F\x70\x61\x67\x65\x5B\x6C\x69\x6D\x69\x74\x5D\x3D\x32\x30\x26\x70\x61\x67\x65\x5B\x6F\x66\x66\x73\x65\x74\x5D\x3D\x31\x30\x30\x26\x66\x69\x6C\x74\x65\x72\x5B\x63\x61\x74\x65\x67\x6F\x72\x69\x65\x73\x5D\x3D","\x47\x45\x54","\x6A\x73\x6F\x6E","\x61\x6A\x61\x78","\x72\x61\x74\x69\x6E\x67\x52\x61\x6E\x6B","\x73\x6F\x72\x74","\x68\x69\x64\x65","\x2E\x70\x6F\x70\x75\x70","\x63\x6C\x69\x63\x6B","\x2E\x65\x78\x69\x74","\x73\x6C\x6F\x77","\x74\x6F\x67\x67\x6C\x65","\x2E\x74\x73","\x68\x6F\x76\x65\x72","\x2E\x74\x73\x75","\x2E\x6B\x75","\x2E\x6B\x75\x75","\x2E\x64\x61","\x2E\x64\x61\x6E","\x2E\x79\x61","\x2E\x79\x61\x6E","\x2E\x75\x74","\x2E\x75\x74\x73","\x2E\x75\x6E","\x2E\x75\x6E\x64","\x2E\x73\x61","\x2E\x73\x61\x64\x6F","\x2E\x6D\x61","\x2E\x6D\x61\x79\x61","\x2E\x6B\x61\x6E","\x2E\x6B\x61\x6E\x65","\x2E\x6B\x61\x6D","\x2E\x6B\x61\x6D\x69","\x2E\x62\x6F\x64","\x2E\x62\x6F\x64\x65","\x2E\x62\x61\x6B","\x2E\x62\x61\x6B\x61"];const app={};$(function(){app[_0x2a8b[0]]()});app[_0x2a8b[0]]= ()=>{app[_0x2a8b[2]](_0x2a8b[1]);app[_0x2a8b[3]]()};app[_0x2a8b[3]]= ()=>{$(_0x2a8b[9])[_0x2a8b[8]](()=>{const _0xe843x2=$(_0x2a8b[5])[_0x2a8b[4]]();$(_0x2a8b[7])[_0x2a8b[6]]();app[_0x2a8b[2]](_0xe843x2)})};app[_0x2a8b[2]]= (_0xe843x3)=>{$[_0x2a8b[37]]({url:_0x2a8b[33],data:{reqUrl:_0x2a8b[34]+ _0xe843x3,method:_0x2a8b[35],q:_0xe843x3,format:_0x2a8b[36]}})[_0x2a8b[32]]((_0xe843x4)=>{let _0xe843x5=(_0xe843x4[_0x2a8b[10]]);app[_0x2a8b[11]](_0xe843x5);_0xe843x5[_0x2a8b[31]]((_0xe843x6)=>{let _0xe843x7=_0xe843x6[_0x2a8b[13]][_0x2a8b[12]];if(_0xe843x7> 70){$(_0x2a8b[7])[_0x2a8b[30]](`${_0x2a8b[14]}${_0xe843x6[_0x2a8b[13]][_0x2a8b[16]][_0x2a8b[15]]}${_0x2a8b[17]}${_0xe843x6[_0x2a8b[13]][_0x2a8b[18]]}${_0x2a8b[19]}${_0xe843x6[_0x2a8b[13]][_0x2a8b[12]]}${_0x2a8b[20]}${_0xe843x6[_0x2a8b[13]][_0x2a8b[21]]}${_0x2a8b[22]}${_0xe843x6[_0x2a8b[13]][_0x2a8b[23]]}${_0x2a8b[24]}${_0xe843x6[_0x2a8b[13]][_0x2a8b[26]][_0x2a8b[25]]}${_0x2a8b[27]}${_0xe843x6[_0x2a8b[13]][_0x2a8b[28]]}${_0x2a8b[29]}`)}})})};app[_0x2a8b[11]]= function(_0xe843x8){_0xe843x8[_0x2a8b[39]]((_0xe843x9,_0xe843xa)=>(_0xe843x9[_0x2a8b[13]][_0x2a8b[38]]> _0xe843xa[_0x2a8b[13]][_0x2a8b[38]])?1:-1)};$(_0x2a8b[43])[_0x2a8b[42]](function(){$(_0x2a8b[41])[_0x2a8b[40]]()});$(_0x2a8b[48])[_0x2a8b[47]](function(){$(_0x2a8b[46])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[50])[_0x2a8b[47]](function(){$(_0x2a8b[49])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[52])[_0x2a8b[47]](function(){$(_0x2a8b[51])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[54])[_0x2a8b[47]](function(){$(_0x2a8b[53])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[56])[_0x2a8b[47]](function(){$(_0x2a8b[55])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[58])[_0x2a8b[47]](function(){$(_0x2a8b[57])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[60])[_0x2a8b[47]](function(){$(_0x2a8b[59])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[62])[_0x2a8b[47]](function(){$(_0x2a8b[61])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[64])[_0x2a8b[47]](function(){$(_0x2a8b[63])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[66])[_0x2a8b[47]](function(){$(_0x2a8b[65])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[68])[_0x2a8b[47]](function(){$(_0x2a8b[67])[_0x2a8b[45]](_0x2a8b[44])});$(_0x2a8b[70])[_0x2a8b[47]](function(){$(_0x2a8b[69])[_0x2a8b[45]](_0x2a8b[44])})
+
+		});
+		
+		</script>
+
+</body>
