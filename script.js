@@ -24,26 +24,30 @@ app.getapp(selection);
 
 
 app.getapp = (query) => {
+	
 $.ajax({
-url: 'http://proxy.hackeryou.com', 
-data:{
-reqUrl: 'https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=100&filter[categories]='+query, 
-method: 'GET', 
-q: query,
-format: 'json'
-}}).then((result) => { 
+	url: 'https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=100&filter[categories]='+query, 
+	
+	data:{
+		method: 'GET', 
+		
+		q: query,
+		
+		format: 'json'
+		
+		}}).then((result) => { 
 
-    let alldata = (result['data']) 
+	    	let alldata = (result['data']) 
 
-    app.displayapp(alldata);  
+		app.displayapp(alldata);  
 
-    alldata.forEach((obj) => {  
+		alldata.forEach((obj) => {  
 
-    let average = obj.attributes.averageRating;
+		let average = obj.attributes.averageRating;
 
-    if (average > 70) {  // this ensures that only animes whose average rating is above 70 get displayed
+		if (average > 70) {  // this ensures that only animes whose average rating is above 70 get displayed
 
-            $('.flex-container').append (
+		$('.flex-container').append (
 
                 `<div class="container">
 
