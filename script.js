@@ -25,9 +25,9 @@ app.getapp(selection);
 
 app.getapp = (query) => {
 $.ajax({
-url: 'http://proxy.hackeryou.com', 
+url: 'https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=100&filter[categories]='+query, 
 data:{
-reqUrl: 'https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=100&filter[categories]='+query, 
+// reqUrl: 'https://kitsu.io/api/edge/anime?page[limit]=20&page[offset]=100&filter[categories]='+query, 
 method: 'GET', 
 q: query,
 format: 'json'
