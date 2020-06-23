@@ -53,11 +53,11 @@ format: 'json'
 
                             <p> This is a ${obj.attributes.showType} feature <p>
 
+ 			    <p class"rate"> It's average rating is <span> ${obj.attributes.averageRating} </span> <p>
+
                             <p> Number of episodes: ${obj.attributes.episodeCount}<p>
 
                             <p class="rating"> Content rating: ${obj.attributes.ageRatingGuide}<p>
-
-                            <p> It's average rating is ${obj.attributes.averageRating}<p>
 
                         </div>
 
