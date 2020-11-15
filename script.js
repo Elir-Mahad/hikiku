@@ -96,50 +96,50 @@ app.displayapp = function(da) {
 // the code below ensures that the the meaning of the japenese words on the left of the landing page
 // appear only when the word is hovered over
 
-$(".tsu").hover(function() {
-	$(".ts").toggle("slow");
-});
+// $(".tsu").hover(function() {
+// 	$(".ts").toggle("slow");
+// });
 
-$(".kuu").hover(function() {
-	$(".ku").toggle("slow");
-});
+// $(".kuu").hover(function() {
+// 	$(".ku").toggle("slow");
+// });
 
-$(".dan").hover(function() {
-	$(".da").toggle("slow");
-});
+// $(".dan").hover(function() {
+// 	$(".da").toggle("slow");
+// });
 
-$(".yan").hover(function() {
-	$(".ya").toggle("slow");
-});
+// $(".yan").hover(function() {
+// 	$(".ya").toggle("slow");
+// });
 
-$(".uts").hover(function() {
-	$(".ut").toggle("slow");
-});
+// $(".uts").hover(function() {
+// 	$(".ut").toggle("slow");
+// });
 
-$(".und").hover(function() {
-	$(".un").toggle("slow");
-});
+// $(".und").hover(function() {
+// 	$(".un").toggle("slow");
+// });
 
-$(".sado").hover(function() {
-	$(".sa").toggle("slow");
-});
+// $(".sado").hover(function() {
+// 	$(".sa").toggle("slow");
+// });
 
-$(".maya").hover(function() {
-	$(".ma").toggle("slow");
-});
+// $(".maya").hover(function() {
+// 	$(".ma").toggle("slow");
+// });
 
-$(".kane").hover(function() {
-	$(".kan").toggle("slow");
-});
+// $(".kane").hover(function() {
+// 	$(".kan").toggle("slow");
+// });
 
-$(".kami").hover(function() {
-	$(".kam").toggle("slow");
-});
+// $(".kami").hover(function() {
+// 	$(".kam").toggle("slow");
+// });
 
-$(".bode").hover(function() {
-	$(".bod").toggle("slow");
-});
+// $(".bode").hover(function() {
+// 	$(".bod").toggle("slow");
+// });
 
-$(".baka").hover(function() {
-	$(".bak").toggle("slow");
-});
+// $(".baka").hover(function() {
+// 	$(".bak").toggle("slow");
+// });

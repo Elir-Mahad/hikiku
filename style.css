@@ -1,15 +1,229 @@
-html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+html {
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+figcaption,
+figure,
+main {
+	display: block;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+abbr[title] {
+	border-bottom: none;
+	text-decoration: underline;
+	text-decoration: underline dotted;
+}
+b,
+strong {
+	font-weight: inherit;
+}
+b,
+strong {
+	font-weight: bolder;
+}
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+dfn {
+	font-style: italic;
+}
+mark {
+	background-color: #ff0;
+	color: #000;
+}
+small {
+	font-size: 80%;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sub {
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
+}
+audio,
+video {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+img {
+	border-style: none;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: sans-serif;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+button,
+input {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
+}
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+legend {
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
+}
+progress {
+	display: inline-block;
+	vertical-align: baseline;
+}
+textarea {
+	overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+[type="search"] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+details,
+menu {
+	display: block;
+}
+summary {
+	display: list-item;
+}
+canvas {
+	display: inline-block;
+}
+template {
+	display: none;
+}
+[hidden] {
+	display: none;
+}
 
-.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
-
-html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
-
-*, *:before, *:after {box-sizing: inherit}
-
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: "";
+	clear: both;
+	height: 0;
+}
 
 html {
-    font-size: 62.5%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 /* Below are the general styles - linking different fonts to their elements. */
@@ -18,378 +232,357 @@ body,
 ul,
 h1,
 h2,
-h3
-p {
-    margin: 0;
-    padding: 0;
+h3 p {
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2rem;
-    background-color:black;
+	font-family: "Quicksand", sans-serif;
+	font-size: 2rem;
+	background-color: black;
 }
 
-
 .wrapper {
-    max-width: 1100px;
-    width: 90%;
-    margin: 0 auto;
+	max-width: 1100px;
+	width: 90%;
+	margin: 0 auto;
 }
 
 /* Below are the Styles for the nav (jp terms)*/
 
 .firstbox {
-    display: flex;
+	display: flex;
 }
 
-.topnavone { 
-    background-color:#eef9bf;
-    padding: 1rem;
-    text-align: center;
+.topnavone {
+	background-color: #eef9bf;
+	padding: 1rem;
+	text-align: center;
+	height: 90rem;
+	border-radius: 1rem;
+	overflow: auto;
 }
 
-.terms h3{
-    font-size:2rem;
-    font-weight: 100;
+.terms h3 {
+	font-size: 2rem;
+	font-weight: 100;
 }
 
-.terms p{
-    font-size:1.7rem;
-    border-bottom:1px solid black;
-    margin-bottom:2.9rem;
+.terms p {
+	font-size: 1.7rem;
+	border-bottom: 1px solid black;
+	margin-bottom: 2.9rem;
 }
 
-.terms span{
-    display: none;
-    color:darkgreen;  
+.terms span {
+	/* display: none; */
+	color: darkgreen;
 }
 
 /* below are the styles for the header */
 
 header {
-    min-width: 90%;
-    background-image: url(./Assets/header.jpg);
-    background-size: cover;
+	min-width: 90%;
+	background-image: url(./Assets/header.jpg);
+	background-size: cover;
 }
 
 .headertext {
-    color:black;
-    width:100%;
-    text-align: center;
-    font-weight: 400;
+	color: black;
+	width: 100%;
+	text-align: center;
+	font-weight: 400;
 }
 
 header h1 {
-    font-size: 6.5rem;
-    font-weight: 400;
-    width: 7%;
-    background-color: #a8d0e6;
-    border-bottom:1px dotted black;
-    border-right:1px dotted black;
-    border-left:1px dotted black;
+	font-size: 6.5rem;
+	font-weight: 400;
+	width: 7%;
+	background-color: #a8d0e6;
+	border-bottom: 1px dotted black;
+	border-right: 1px dotted black;
+	border-left: 1px dotted black;
 }
 
-.headertext h3{
-    font-size:1.7rem;
-    font-weight: 400;
-    background-color: #a8d0e6;
-    border-bottom:1px dotted black;
-    border-right:1px dotted black;
-    padding: 1rem;
-    width: 90%;
-    position: relative;
-    bottom:24.6rem;
-    left:8.6rem;
+.headertext h3 {
+	font-size: 1.7rem;
+	font-weight: 400;
+	background-color: #a8d0e6;
+	border-bottom: 1px dotted black;
+	border-right: 1px dotted black;
+	padding: 1rem;
+	width: 90%;
+	position: relative;
+	bottom: 24.6rem;
+	left: 8.6rem;
 }
-
 
 /* Below general styles for the 'anime gallery'  */
 
 .animegallery {
-    background-color:#eef9bf;
-    padding-top: 3rem;
+	background-color: #eef9bf;
+	padding-top: 3rem;
 }
 
-.instructions{
-    display:flex;
-    justify-content:center;
-    margin-top: -2.5rem;
-    margin-bottom: -1rem;
+.instructions {
+	display: flex;
+	justify-content: center;
+	margin-top: -2.5rem;
+	margin-bottom: -1rem;
 }
 
 .instructions p {
-    border:1px solid black;
-    padding: 1rem;
+	border: 1px solid black;
+	padding: 1rem;
 }
 
 .instructions select {
-    margin:2rem;
-    padding: 1rem;
-    color: black;
-    font-size:2rem;
-    font-weight: 500;
-    width: 250px;
-    box-sizing: border-box;
-    border: 2px solid green;
-    border-radius: 0.5em;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    background: url(./Assets/down-arrow.svg);
-    background-repeat: no-repeat, repeat;
-    background-position: right 0.7em top 60%, 0 0;
-    background-size: 1.8rem;
-    background-color:aliceblue;
+	margin: 2rem;
+	padding: 1rem;
+	color: black;
+	font-size: 2rem;
+	font-weight: 500;
+	width: 250px;
+	box-sizing: border-box;
+	border: 2px solid green;
+	border-radius: 0.5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background: url(./Assets/down-arrow.svg);
+	background-repeat: no-repeat, repeat;
+	background-position: right 0.7em top 60%, 0 0;
+	background-size: 1.8rem;
+	background-color: aliceblue;
 }
 
 .animegallery h2 {
-    font-size:2.5rem;
-    padding: 1rem;
-    border:1px solid black;
-    background-color: #a8d0e6;
+	font-size: 2.5rem;
+	padding: 1rem;
+	border: 1px solid black;
+	background-color: #a8d0e6;
 }
 
-.animegallery h3{
-    font-size:2rem;
-    font-weight: 100;
-    margin-top:-1rem;
-    text-align: center;
+.animegallery h3 {
+	font-size: 2rem;
+	font-weight: 100;
+	margin-top: -1rem;
+	text-align: center;
 }
 
 .animegallery p {
-    font-size:1.9rem;
+	font-size: 1.9rem;
 }
 
-.animegallery .rate span { 
-    border-bottom:4px dotted red;
+.animegallery .rate span {
+	border-bottom: 4px dotted red;
 }
 
-
-.animegallery img{
-    width: 20rem;
-    height: 100%;
+.animegallery img {
+	width: 20rem;
+	height: 100%;
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    padding: 1rem;
-    background-color: #a8d0e6;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
+	height: 100%;
+	width: 100%;
+	padding: 1rem;
+	background-color: #a8d0e6;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
 }
 
 .overlay p {
-    color: black; 
-    font-weight: 700;
-    font-size:1.2rem;
-    padding: 1rem;
-}   
+	color: black;
+	font-weight: 700;
+	font-size: 1.2rem;
+	padding: 1rem;
+}
 
-.container:hover .overlay { 
-    opacity:1;
-} 
+.container:hover .overlay {
+	opacity: 1;
+}
 
 .container:hover {
-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 /* Below are the specific styles for content within the containers */
 
 .animegallery .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .animegallery .container {
-    display: flex;
-    box-shadow: 0px 0px 5px black; 
-    position: relative;
-    width: calc((135%/3) - 0%);   
-    margin: 2%;
+	display: flex;
+	box-shadow: 0px 0px 5px black;
+	position: relative;
+	width: calc((135% / 3) - 0%);
+	margin: 2%;
 }
 
 .animegallery .container .words {
-    color:black;
-    padding: 2rem;
-    width: 100%;
-    height: 100%;
-    background-color:#f5f8f9; 
-    color:black;    
+	color: black;
+	padding: 2rem;
+	width: 100%;
+	height: 100%;
+	background-color: #f5f8f9;
+	color: black;
 }
 
 /* Footer */
 
 footer {
-    background-color:black;
-    color:white;
-    font-size:1.5rem;
-    text-align: center;
-    padding: 0rem;
+	background-color: black;
+	color: white;
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 0rem;
 }
-
 
 /* media queries */
 
 @media (max-width: 1024px) {
+	header {
+		min-width: 100%;
+		height: 65rem;
+	}
 
-    header {
-        min-width: 100%;
-        height: 65rem;    
-    }
+	.headertext h1 {
+		font-size: 10rem;
+		width: 10%;
+	}
 
-    .headertext h1 {
-        font-size:10rem;
-        width:10%;
+	.headertext h3 {
+		display: none;
+	}
 
-    }
+	.topnavone {
+		display: none;
+	}
 
-    .headertext h3{
-        display: none;
-    }
+	.popup {
+		display: none;
+	}
 
-    .topnavone { 
-        display:none;
-    }
+	.animegallery .container {
+		width: calc((150% / 2) - 2%);
+		margin: 2%;
+	}
 
-    .popup {
-        display: none;
-    }
+	.animegallery .container h2 {
+		font-size: 2.3rem;
+	}
 
-
-    .animegallery .container {
-        width: calc((150%/2) - 2%);   
-        margin: 2%;
-    }
-
-    .animegallery .container h2{
-        font-size:2.3rem;
-    }
-
-    .animegallery .words p{
-        font-size:1.8rem;
-    }
-
+	.animegallery .words p {
+		font-size: 1.8rem;
+	}
 }
 
-@media (max-width:834px) {
+@media (max-width: 834px) {
+	header {
+		height: 55rem;
+	}
 
-    header{
-        height: 55rem;
-    }
-
-    .headertext h1 {
-        width:13%;
-        font-size:9rem;   
-    }
-
+	.headertext h1 {
+		width: 13%;
+		font-size: 9rem;
+	}
 }
 
-@media (max-width:800px) {
-
-    .animegallery .container {
-        width: calc((190%/2) - 2%);
-    }     
-
+@media (max-width: 800px) {
+	.animegallery .container {
+		width: calc((190% / 2) - 2%);
+	}
 }
 
+@media (max-width: 600px) {
+	header {
+		height: 40rem;
+	}
 
-@media (max-width:600px) {
+	.headertext h1 {
+		width: 14%;
+		font-size: 6rem;
+	}
 
-    header {
-        height: 40rem;
-    }
-
-    .headertext h1 {
-        width:14%;
-        font-size:6rem;
-
-    }
-
-    .animegallery .container {
-        width: calc((200%/2) - 2%);
-    } 
-
+	.animegallery .container {
+		width: calc((200% / 2) - 2%);
+	}
 }
 
-@media (max-width:414px) {
+@media (max-width: 414px) {
+	header {
+		height: 28rem;
+	}
 
-    header{
-        height: 28rem;
-    }
+	.headertext h1 {
+		width: 14%;
+		font-size: 5rem;
+	}
 
-    .headertext h1 {
-        width:14%;
-        font-size:5rem;   
-    }    
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
 
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
+	.container .image {
+		background-color: #f5f8f9;
+		margin-top: -2rem;
+	}
 
-    .container .image{
-        background-color:#f5f8f9;
-        margin-top:-2rem;
+	.container img {
+		height: 25rem;
+		width: 20rem;
+		display: block;
+		margin: auto;
+		margin-bottom: 2rem;
+	}
 
-    }
+	.animegallery .words p {
+		font-size: 1.9rem;
+	}
 
-    .container img{
-        height: 25rem;
-        width: 20rem;
-        display: block;
-        margin:auto;
-        margin-bottom:2rem;
-    }
-
-    .animegallery .words p{
-        font-size:1.9rem;
-    }
-
-    .overlay p {
-    font-size:1.25rem;
-    }   
-
+	.overlay p {
+		font-size: 1.25rem;
+	}
 }
 
-@media (max-width:384px) {
+@media (max-width: 384px) {
+	header {
+		height: 24rem;
+	}
 
-    header{
-        height: 24rem;
-    }
+	.headertext h1 {
+		font-size: 5rem;
+		width: 18%;
+	}
 
-    .headertext h1{
-        font-size:5rem;
-        width: 18%;
-    }
+	.describesite {
+		padding: 1rem;
+	}
 
-    .describesite {
-        padding: 1rem;
-    }
+	.container .words h2 {
+		font-size: 2.5rem;
+	}
 
-    .container .words h2{
-        font-size:2.5rem;
-    }
+	.container .words p {
+		font-size: 2rem;
+	}
 
-    .container .words p{
-        font-size:2rem;
-    }
-
-    .container img{
-        height: 20rem;
-        width: 15rem;
-    }
-
+	.container img {
+		height: 20rem;
+		width: 15rem;
+	}
 }
-        
-	    
