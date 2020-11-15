@@ -264,14 +264,15 @@ body {
 }
 
 .terms h3 {
-	font-size: 2rem;
-	font-weight: 100;
+	font-size: 1.7rem;
+	border-bottom: 1px solid black;
+	padding-bottom: 1rem;
 }
 
 .terms p {
-	font-size: 1.7rem;
+	font-size: 1.5rem;
 	border-bottom: 1px solid black;
-	margin-bottom: 2.9rem;
+	padding-bottom: 1rem;
 }
 
 .terms span {
